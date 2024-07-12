@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Drawer",
       home: DrawerDemo(),
     );
@@ -41,7 +42,68 @@ class _DrawerDemoState extends State<DrawerDemo> {
                   ),
                 ),
               ),
+            ),
+            ListTile(
+              title: Row(
+                children: [
+                  Icon(Icons.home),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Home"),
+                  ),
+
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                children: [
+                  Icon(Icons.person),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Profile"),
+                  ),
+
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                children: [
+                  Icon(Icons.settings),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Settings"),
+                  ),
+
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                children: [
+                  Icon(Icons.contact_emergency),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Contact"),
+                  ),
+
+                ],
+              ),
+            ),
+            ListTile(
+              title: Row(
+                children: [
+                  Icon(Icons.help),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Help"),
+                  ),
+
+                ],
+              ),
             )
+
           ],
         ),
       ),
