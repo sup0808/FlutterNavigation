@@ -2,6 +2,9 @@
 Navigation Drawer youtube url 
 https://www.youtube.com/watch?v=NR7CObRa7Gc
 
+Bottom Navigation Url
+https://www.youtube.com/watch?v=9__pMx8_Gsc
+
 A new Flutter project.
 
 ## Getting Started

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation/views/home_screen.dart';
 
 class DrawerDemo extends StatefulWidget {
   @override
@@ -25,6 +26,9 @@ class _DrawerDemoState extends State<DrawerDemo> {
               ),
             ),
             ListTile(
+              onTap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=> HomeScreen()) );
+              },
               title: Row(
                 children: [
                   Icon(Icons.home),
