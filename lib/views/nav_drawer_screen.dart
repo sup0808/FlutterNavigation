@@ -9,14 +9,9 @@ class DrawerDemo extends StatefulWidget {
 class _DrawerDemoState extends State<DrawerDemo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Drawer Demo "),
-      ),
-      drawer: Drawer(
-        child: ListView(
+    return ListView(
           children: [
-            const UserAccountsDrawerHeader(
+            UserAccountsDrawerHeader(
               accountName: Text("Supriya Gupta"),
               accountEmail: Text("supriyag75@gmail.com"),
               currentAccountPicture: CircleAvatar(
@@ -91,8 +86,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
             )
 
           ],
-        ),
-      ),
-    );
+        );
+
   }
 }

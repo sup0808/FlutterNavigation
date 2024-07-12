@@ -11,8 +11,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Drawer",
-      home: DrawerDemo(),
+      home: HomePage(),
     );
+  }
+}
+
+class HomePage extends StatefulWidget{
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(
+       centerTitle: true,
+       title: const Text("Drawer Demo "),
+     ),
+     drawer: Drawer(
+        child: DrawerDemo(),
+     ),
+    // bottomNavigationBar: BottomNavigationBar(
+
+   //  ),
+   );
+
   }
 }
 
