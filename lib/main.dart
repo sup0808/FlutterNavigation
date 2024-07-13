@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
         title: const Text("Drawer Demo "),
       ),
       drawer: DrawerDemo(),

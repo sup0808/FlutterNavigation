@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation/views/bottom_navigation_screen.dart';
 import 'package:flutter_navigation/views/home_screen.dart';
 
 class DrawerDemo extends StatefulWidget {
@@ -30,7 +31,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
                 leading:  Icon(Icons.home),
                 title: Text("Home"),
                 onTap: (){
-                  Navigator.pushNamed(context, "/");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen(selectedIndex : 0)));
                 //  Navigator.pop(context);
                 },
               ),
@@ -38,7 +39,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
                 leading:  Icon(Icons.person),
                 title: Text("Profile"),
                 onTap: (){
-                  Navigator.pushNamed(context, "/profile");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen(selectedIndex : 1)));
               //    Navigator.pop(context);
                 },
               ),
@@ -46,7 +47,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
                 leading:  Icon(Icons.settings),
                 title: Text("Settings"),
                 onTap: (){
-                  Navigator.pushNamed(context, "/settings");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen(selectedIndex : 2)));
                   //Navigator.pop(context);
                 },
               ),
@@ -54,7 +55,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
                 leading:  Icon(Icons.contact_emergency),
                 title: Text("Contact"),
                 onTap: (){
-                  Navigator.pushNamed(context, "/contact");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen(selectedIndex : 3)));
                   //Navigator.pop(context);
                 },
               ),
@@ -62,7 +63,7 @@ class _DrawerDemoState extends State<DrawerDemo> {
                 title:  Text("Help"),
                 leading: Icon(Icons.help),
                 onTap: (){
-                  Navigator.pushNamed(context, "/help");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationScreen(selectedIndex : 4)));
                  // Navigator.pop(context);
                 },
               ),
