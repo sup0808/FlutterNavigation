@@ -52,9 +52,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: const Text("Drawer Demo "),
       ),
-      drawer: Drawer(
-        child: DrawerDemo(),
-      ),
+      drawer: DrawerDemo(),
       body: screensList[currentIndexValue],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -66,7 +64,7 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.blueGrey,
         currentIndex: currentIndexValue,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home), label: "Home", tooltip: "Home"),
           BottomNavigationBarItem(
