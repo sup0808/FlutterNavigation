@@ -16,7 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Drawer",
-      home: HomePage(),
+      //home: HomePage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context)=>HomePage(),
+        "/profile" : (context) => ProfileScreen(),
+        "/settings" : (context) => SettingsScreen(),
+        "/help" : (context) => HelpScreen(),
+        "/contact" : (context) => ContactScreen()
+      },
     );
   }
 }

@@ -26,68 +26,45 @@ class _DrawerDemoState extends State<DrawerDemo> {
               ),
             ),
             ListTile(
+              leading:  Icon(Icons.home),
+              title: Text("Home"),
               onTap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context)=> HomeScreen()) );
+                Navigator.pushNamed(context, "/");
+              //  Navigator.pop(context);
               },
-              title: Row(
-                children: [
-                  Icon(Icons.home),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text("Home"),
-                  ),
-
-                ],
-              ),
             ),
             ListTile(
-              title: Row(
-                children: [
-                  Icon(Icons.person),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text("Profile"),
-                  ),
-
-                ],
-              ),
+              leading:  Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: (){
+                Navigator.pushNamed(context, "/profile");
+            //    Navigator.pop(context);
+              },
             ),
             ListTile(
-              title: Row(
-                children: [
-                  Icon(Icons.settings),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text("Settings"),
-                  ),
-
-                ],
-              ),
+              leading:  Icon(Icons.settings),
+              title: Text("Settings"),
+              onTap: (){
+                Navigator.pushNamed(context, "/settings");
+                //Navigator.pop(context);
+              },
             ),
             ListTile(
-              title: Row(
-                children: [
-                  Icon(Icons.contact_emergency),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text("Contact"),
-                  ),
-
-                ],
-              ),
+              leading:  Icon(Icons.contact_emergency),
+              title: Text("Contact"),
+              onTap: (){
+                Navigator.pushNamed(context, "/contact");
+                //Navigator.pop(context);
+              },
             ),
             ListTile(
-              title: Row(
-                children: [
-                  Icon(Icons.help),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text("Help"),
-                  ),
-
-                ],
-              ),
-            )
+              title:  Text("Help"),
+              leading: Icon(Icons.help),
+              onTap: (){
+                Navigator.pushNamed(context, "/help");
+               // Navigator.pop(context);
+              },
+            ),
 
           ],
         );
