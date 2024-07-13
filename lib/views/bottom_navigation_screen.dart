@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_navigation/views/profile_screen.dart';
 import 'package:flutter_navigation/views/settings_screen.dart';
 
+import '../main.dart';
+import 'contact_screen.dart';
 import 'help_screen.dart';
 import 'home_screen.dart';
 import 'nav_drawer_screen.dart';
@@ -19,34 +21,39 @@ class BottomNavigationScreen extends StatefulWidget{
 
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
-  int currentIndexValue = 0;
+  int currentIndex = 0;
   List screensList = [
-    HomeScreen(),
+    HomePage(),
     ProfileScreen(),
     SettingsScreen(),
-    HelpScreen()
-
-
+    ContactScreen(),
+    HelpScreen(),
   ];
+  final PageStorageBucket bucket = PageStorageBucket();
+
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     appBar: AppBar(
-       centerTitle: true,
-       title: const Text("Drawer Demo "),
+
+    Widget currentScreen = currentIndex  == 0? HomePage() : currentIndex == 1 ?
+    ProfileScreen() : currentIndex ==2 ? SettingsScreen() :  currentIndex ==3 ? ContactScreen() :HelpScreen();
+
+
+    return Scaffold(
+
+     body: PageStorage(
+       bucket: bucket,
+       child: currentScreen,
      ),
-     drawer: DrawerDemo(),
-     body: screensList[currentIndexValue],
      bottomNavigationBar: BottomNavigationBar(
        type: BottomNavigationBarType.fixed,
        onTap: (index){
          setState(() {
-           currentIndexValue = index;
+           currentIndex = index;
          });
        },
        selectedItemColor: Colors.blue,
        unselectedItemColor: Colors.blueGrey,
-       currentIndex: currentIndexValue,
+       currentIndex: currentIndex,
        items: const [
          BottomNavigationBarItem(
              icon: Icon(Icons.home), label: "Home", tooltip: "Home"),

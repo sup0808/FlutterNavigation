@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation/views/bottom_navigation_screen.dart';
 import 'package:flutter_navigation/views/contact_screen.dart';
 import 'package:flutter_navigation/views/help_screen.dart';
 import 'package:flutter_navigation/views/home_screen.dart';
@@ -16,15 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Drawer",
-      //home: HomePage(),
-      initialRoute: "/",
-      routes: {
-        "/": (context)=>HomePage(),
-        "/profile" : (context) => ProfileScreen(),
-        "/settings" : (context) => SettingsScreen(),
-        "/help" : (context) => HelpScreen(),
-        "/contact" : (context) => ContactScreen()
-      },
+      home: BottomNavigationScreen(selectedIndex: 0,),
+     
     );
   }
 }
